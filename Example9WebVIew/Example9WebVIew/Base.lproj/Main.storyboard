@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example9WebVIew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQI-O8-RsK">
+                                <rect key="frame" x="20" y="144" width="374" height="518"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arV-6v-Air">
+                                <rect key="frame" x="20" y="702" width="66.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73e-Ho-nUm">
+                                <rect key="frame" x="106.5" y="702" width="287.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyj-Yh-2yo">
+                                <rect key="frame" x="20" y="776" width="83.5" height="31"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="WebView"/>
+                                <connections>
+                                    <action selector="webViewpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2O-YG-Z1A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-jD-5M2">
+                                <rect key="frame" x="332.5" y="776" width="61.5" height="31"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Safari"/>
+                                <connections>
+                                    <action selector="safariPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5Z-E2-2ek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="73e-Ho-nUm" secondAttribute="trailing" constant="20" id="0WA-GV-f7O"/>
+                            <constraint firstItem="arV-6v-Air" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Zk-gs-DSY"/>
+                            <constraint firstItem="x1l-jD-5M2" firstAttribute="top" secondItem="73e-Ho-nUm" secondAttribute="bottom" constant="40" id="57m-G0-tAt"/>
+                            <constraint firstItem="73e-Ho-nUm" firstAttribute="leading" secondItem="arV-6v-Air" secondAttribute="trailing" constant="20" id="9kS-lt-B88"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pQI-O8-RsK" secondAttribute="bottom" constant="200" id="Avp-al-U9b"/>
+                            <constraint firstItem="pQI-O8-RsK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GaC-uO-mai"/>
+                            <constraint firstItem="iyj-Yh-2yo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L4y-KF-hhu"/>
+                            <constraint firstItem="arV-6v-Air" firstAttribute="top" secondItem="pQI-O8-RsK" secondAttribute="bottom" constant="40" id="Voc-6A-jWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQI-O8-RsK" secondAttribute="trailing" constant="20" id="X4A-gO-s9k"/>
+                            <constraint firstItem="iyj-Yh-2yo" firstAttribute="top" secondItem="73e-Ho-nUm" secondAttribute="bottom" constant="40" id="Yl4-x0-Hou"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x1l-jD-5M2" secondAttribute="trailing" constant="20" id="gKE-bN-41d"/>
+                            <constraint firstItem="73e-Ho-nUm" firstAttribute="top" secondItem="pQI-O8-RsK" secondAttribute="bottom" constant="40" id="mZB-vS-ntS"/>
+                            <constraint firstItem="x1l-jD-5M2" firstAttribute="width" secondItem="iyj-Yh-2yo" secondAttribute="width" multiplier="0.736527" id="qGu-FJ-eZO"/>
+                            <constraint firstItem="x1l-jD-5M2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iyj-Yh-2yo" secondAttribute="trailing" constant="40" id="s6v-V3-kx7"/>
+                            <constraint firstItem="pQI-O8-RsK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="tS8-Cf-f2L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webURLfield" destination="73e-Ho-nUm" id="zPC-XV-LTr"/>
+                        <outlet property="webView" destination="pQI-O8-RsK" id="rTI-rc-6mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
